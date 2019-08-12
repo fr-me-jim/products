@@ -1,0 +1,18 @@
+{
+
+    "restaurant": [
+        {
+            "dishPrice" : "200",
+            "dishName" : "Cheescake",
+            "category" : "dessert",
+            "id" : 1
+        },
+        {
+            "dishPrice" : "300",
+            "dishName" : "Rib Eye 400g",
+            "category" : "cuts",
+            "id" : 2
+        }
+    ]
+
+}
