@@ -12,19 +12,25 @@ function App() {
 
   //state
   const [ products, setProducts ] = useState([]);
+  const [ reload, setReload ] = useState(true);
 
   useEffect(() => {
-    const queryAPI = async () => {
-      const url = `http://localhost:4000/restaurant`;
+    if(reload) {
+      const queryAPI = async () => {
+        const url = `http://localhost:4000/restaurant`;
+  
+        const response = await axios.get(url);
+  
+        setProducts(response.data);
+      }
+  
+      queryAPI(); 
 
-      const response = await axios.get(url);
-
-      setProducts(response.data);
+      //stop reload
+      setReload(false);
     }
 
-    queryAPI(); 
-
-  }, []);
+  }, [ reload ]);
 
   return (
     <Router>
@@ -32,7 +38,13 @@ function App() {
 
       <main className="container mt-5">
         <Switch>
-          <Route exact path="/products/new" component={AddProduct} />
+          <Route exact path="/products/new" 
+            render={ () => {
+              <AddProduct 
+                setReload={setReload}
+              />
+            } } 
+          />
           <Route exact path="/products" 
             render={ () => (
               <Products 
