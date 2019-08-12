@@ -7,12 +7,6 @@
       "id": 1
     },
     {
-      "dishPrice": "300",
-      "dishName": "Rib Eye 400g",
-      "category": "cuts",
-      "id": 2
-    },
-    {
       "dishName": "Coulant",
       "dishPrice": "100",
       "category": "dessert",
@@ -23,6 +17,12 @@
       "dishPrice": "80",
       "category": "dessert",
       "id": 4
+    },
+    {
+      "dishName": "Chicken & Vegetables Salat",
+      "dishPrice": "120",
+      "category": "salat",
+      "id": 5
     }
   ]
 }
