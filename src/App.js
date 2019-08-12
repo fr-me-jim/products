@@ -6,7 +6,6 @@ import Header from './components/Header';
 import Products from './components/Products';
 import AddProduct from './components/AddProduct';
 import EditProduct from './components/EditProduct';
-import Product from './components/Product';
 
 function App() {
 
@@ -68,7 +67,6 @@ function App() {
               );
             } } 
           />
-          <Route  exact path="/products/:id" component={Product} />
         </Switch>
       </main>
 

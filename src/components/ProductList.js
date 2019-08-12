@@ -32,7 +32,7 @@ const ProductList = ({product, setReload}) => {
                             'The product has been deleted.',
                             'success'
                         )
-                        
+
                         //reload api
                         setReload(true);
                     }
@@ -53,8 +53,9 @@ const ProductList = ({product, setReload}) => {
             className="list-group-item d-flex justify-content-between align-items-center"
         >
             <p>
-                {product.dishName} { '  ' }
-                <span className="font-weight-bold">${product.dishPrice}</span>
+                {product.dishName}
+                <span className="font-weight-bold mx-2">${product.dishPrice}</span>
+                <span className="badge badge-info" >{product.category}</span>
             </p>
 
             <div>
