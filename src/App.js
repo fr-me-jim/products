@@ -39,20 +39,35 @@ function App() {
       <main className="container mt-5">
         <Switch>
           <Route exact path="/products/new" 
-            render={ () => {
+            render={ () => (
               <AddProduct 
                 setReload={setReload}
               />
-            } } 
+             ) } 
           />
           <Route exact path="/products" 
             render={ () => (
               <Products 
                 products={products}
+                setReload={setReload}
               />
             ) } 
           />
-          <Route exact path="/products/edit/:id" component={EditProduct} />
+          <Route exact path="/products/edit/:id" 
+            render={ props => {
+              const idProduct = parseInt(props.match.params.id);
+
+              //get product 
+              const product = products.filter( product => product.id === idProduct );
+
+              return (
+                <EditProduct 
+                  product={product[0]}
+                  setReload={setReload}
+                />
+              );
+            } } 
+          />
           <Route  exact path="/products/:id" component={Product} />
         </Switch>
       </main>
