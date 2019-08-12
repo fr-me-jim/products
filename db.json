@@ -1,18 +1,28 @@
 {
-
-    "restaurant": [
-        {
-            "dishPrice" : "200",
-            "dishName" : "Cheescake",
-            "category" : "dessert",
-            "id" : 1
-        },
-        {
-            "dishPrice" : "300",
-            "dishName" : "Rib Eye 400g",
-            "category" : "cuts",
-            "id" : 2
-        }
-    ]
-
+  "restaurant": [
+    {
+      "dishPrice": "200",
+      "dishName": "Cheescake",
+      "category": "dessert",
+      "id": 1
+    },
+    {
+      "dishPrice": "300",
+      "dishName": "Rib Eye 400g",
+      "category": "cuts",
+      "id": 2
+    },
+    {
+      "dishName": "Coulant",
+      "dishPrice": "100",
+      "category": "dessert",
+      "id": 3
+    },
+    {
+      "dishName": "Fried Banana",
+      "dishPrice": "80",
+      "category": "dessert",
+      "id": 4
+    }
+  ]
 }
